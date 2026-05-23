@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import { Footer } from '@/components/footer'
 import { HealthProvider } from '@/components/health-provider'
 import '@/styles/globals.css'
@@ -46,6 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Footer />
         </HealthProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
