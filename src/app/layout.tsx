@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     siteName: 'Bosko',
     images: [
       {
-        url: '/assets/bosko-app-icon.png',
-        width: 1024,
-        height: 1024,
+        url: '/assets/bosko-app-icon.webp',
+        width: 512,
+        height: 512,
         alt: 'Bosko - Pronto para sua próxima história?',
-        type: 'image/png',
+        type: 'image/webp',
       },
     ],
     locale: 'pt_BR',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Bosko · Pronto para sua próxima história?',
     description: 'Leitor de eBooks com biblioteca de clássicos em domínio público e estante pessoal.',
-    images: ['/assets/bosko-app-icon.png'],
+    images: ['/assets/bosko-app-icon.webp'],
   },
 }
 
