@@ -1,0 +1,266 @@
+/* ============================================================
+ * Bosko Design System — colors & type tokens
+ *
+ * Sourced from:
+ *   - abagtech/bosko-app src/global.css (HSL CSS variables, shadcn / new-york)
+ *   - Bosko Design.fig brand sheet (logos, banners, identity)
+ *   - tailwind.config.js
+ *
+ * Bosko is a gamified Brazilian e-book reader (React Native + Expo).
+ * Brand voice: minimalist, high-contrast, single piercing orange accent.
+ * ============================================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Hind:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ============================================================
+ * COLOR — raw palette
+ * Black, orange and white are the entire brand — used 940×/30×/352×
+ * in the Figma file respectively. Treat orange as a *piercing*
+ * accent — sparingly on light, generously on hero / dark surfaces.
+ * ============================================================ */
+:root {
+  /* Raw brand colors */
+  --bosko-black:     #000000;   /* obsidian — the only true black */
+  --bosko-orange:    #FF6900;   /* the only accent. signal, CTA, key brand element */
+  --bosko-orange-2:  #F77A1B;   /* secondary orange (hover / shadow rim) */
+  --bosko-white:     #FFFFFF;
+  --bosko-cream:     #FBF8F2;   /* warm light bg (HSL 40 60% 98%) */
+  --bosko-card:      #F5F0E5;   /* warm card surface */
+  --bosko-sand:      #EFE6D2;   /* warm muted */
+  --bosko-tan:       #E6D4B0;   /* warm accent */
+  --bosko-stone-900: #1A1714;   /* deep dark bg (HSL 24 9.8% 10%) */
+  --bosko-stone-800: #28231F;   /* dark card */
+  --bosko-stone-700: #3C342C;   /* dark border */
+  --bosko-stone-500: #57514A;   /* secondary text dark */
+  --bosko-stone-400: #A89C8E;   /* muted text dark */
+  --bosko-stone-300: #CFC5B5;   /* light mode muted text */
+  --bosko-stone-200: #E2D9C7;   /* light mode border */
+  --bosko-red-700:   #991919;   /* destructive light (HSL 0 70% 35%) */
+  --bosko-red-500:   #DC2626;   /* destructive dark */
+  --bosko-teal-900:  #1E4A55;   /* dark accent (HSL 198 46% 22%) */
+  --bosko-amber-700: #A18207;   /* chart-3 (HSL 35 92% 33%) */
+  --bosko-amber-500: #FBBF24;   /* chart-3 dark */
+  --bosko-cyan-500:  #0EA5E9;   /* chart-2 dark */
+}
+
+/* ============================================================
+ * SEMANTIC tokens — shadcn-style, HSL channels
+ * `--background`, `--foreground` etc. consumed by tailwind config.
+ * LIGHT THEME is the default. Add `.dark` on any ancestor for dark.
+ * ============================================================ */
+:root {
+  --background:             40 60% 98%;
+  --foreground:             20.87 18.4% 24.51%;
+  --card:                   36 41.67% 95.29%;
+  --card-foreground:        20.87 18.4% 24.51%;
+  --popover:                36 41.67% 95.29%;
+  --popover-foreground:     20.87 18.4% 24.51%;
+  --primary:                25.97 90.48% 37.06%;  /* orange darkened for AA on cream */
+  --primary-foreground:     0 0% 100%;
+  --secondary:              34.29 60.87% 72.94%;
+  --secondary-foreground:   33.33 5.45% 32.35%;
+  --muted:                  39.13 45.1% 90%;
+  --muted-foreground:       25 5.26% 44.71%;
+  --accent:                 34.29 68.29% 83.92%;
+  --accent-foreground:      33.33 5.45% 32.35%;
+  --destructive:            0 70% 35.29%;
+  --destructive-foreground: 0 0% 100%;
+  --border:                 43.5 42.55% 81.57%;
+  --input:                  43.5 42.55% 81.57%;
+  --ring:                   25.97 90.48% 37.06%;
+  --chart-1:                25.97 90.48% 37.06%;
+  --chart-2:                25 5.26% 44.71%;
+  --chart-3:                35.45 91.67% 32.94%;
+  --chart-4:                25 5.26% 44.71%;
+  --chart-5:                40.61 96.12% 40.39%;
+  --radius:                 0.3rem;
+
+  /* Bosko brand-pure overrides (use when you want the marketing palette
+     instead of the in-app warm/muted version) */
+  --brand-bg:               0 0% 0%;
+  --brand-fg:               0 0% 100%;
+  --brand-accent:           24.58 100% 50%;   /* #FF6900 exact */
+}
+
+.dark, .dark:root {
+  --background:             24 9.8% 10%;
+  --foreground:             60 4.76% 95.88%;
+  --card:                   12 6.49% 15.1%;
+  --card-foreground:        60 4.76% 95.88%;
+  --popover:                12 6.49% 15.1%;
+  --popover-foreground:     60 4.76% 95.88%;
+  --primary:                24.58 94.98% 53.14%;  /* full #FF6900 brightness */
+  --primary-foreground:     0 0% 100%;
+  --secondary:              33.33 5.45% 32.35%;
+  --secondary-foreground:   20 5.88% 90%;
+  --muted:                  30 10.34% 11.37%;
+  --muted-foreground:       24 5.43% 63.92%;
+  --accent:                 198.46 46.43% 21.96%;
+  --accent-foreground:      20 5.88% 90%;
+  --destructive:            0 72.22% 50.59%;
+  --destructive-foreground: 0 0% 100%;
+  --border:                 30 6.25% 25.1%;
+  --input:                  30 6.25% 25.1%;
+  --ring:                   24.58 94.98% 53.14%;
+  --chart-1:                24.58 94.98% 53.14%;
+  --chart-2:                198.63 88.66% 48.43%;
+  --chart-3:                45.4 93.39% 47.45%;
+  --chart-4:                24 5.43% 63.92%;
+  --chart-5:                25 5.26% 44.71%;
+}
+
+/* ============================================================
+ * TYPE — families, scale, semantic styles
+ * - Inter for product UI (matches the app + marketing copy "Pronto…")
+ * - Hind Bold for marketing display ("Levando sua leitura para outro nível")
+ * - JetBrains Mono for code/numerics
+ * ============================================================ */
+:root {
+  --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Hind', 'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale — built around the figma's 96/100/104px display values
+     downscaled for product use. */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  30px;
+  --text-4xl:  36px;
+  --text-5xl:  48px;
+  --text-6xl:  60px;
+  --text-7xl:  72px;
+  --text-display: 96px;     /* Hind Bold, marketing only */
+  --text-display-lg: 104px; /* Inter Medium hero */
+
+  /* Tracking — Bosko uses tight negative tracking on display,
+     and wide 8px letter-spacing on shouty CTAs ("BAIXAR BOSKO"). */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.05em;
+  --tracking-shout:    0.5em;   /* uppercase CTA pills */
+
+  /* Line-heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+}
+
+/* ---------- Semantic typography classes ----------
+   These mirror the shadcn `<Text variant=…>` in the codebase. */
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tight);
+}
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+.h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+.p, p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+.lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: hsl(var(--muted-foreground));
+}
+.large { font-family: var(--font-sans); font-weight: 600; font-size: var(--text-lg); }
+.small { font-family: var(--font-sans); font-weight: 500; font-size: var(--text-sm); line-height: 1; }
+.muted { font-family: var(--font-sans); font-size: var(--text-sm); color: hsl(var(--muted-foreground)); }
+.code  {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  background: hsl(var(--muted));
+  border-radius: 4px;
+  padding: 0.2em 0.3em;
+}
+.cta-shout {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-shout);
+}
+
+/* ============================================================
+ * SPACING / RADIUS / SHADOW
+ * radius mirror's tailwind config: lg = var(--radius), sm = -4, md = -2, xl = +4
+ * Default --radius = 0.3rem (4.8px) — small, sharp corners. NOT pill-y.
+ * ============================================================ */
+:root {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: 1rem;
+  --radius-pill: 9999px;
+
+  /* Spacing — tailwind default, surfaced for designer reference */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Shadows — subtle. Bosko's UI uses shadow-sm shadow-black/5 almost
+     everywhere; marketing/banners are flat. */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.10), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+  --shadow-glow: 0 0 0 4px rgb(255 105 0 / 0.20);  /* focus ring on orange */
+}
+
+/* ============================================================
+ * Global element resets (when this file is loaded directly into
+ * a non-tailwind page — keeps a Bosko-flavoured default).
+ * ============================================================ */
+html, body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
