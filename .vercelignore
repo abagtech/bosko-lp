@@ -1,0 +1,10 @@
+.env.local
+.env.*.local
+node_modules
+npm-debug.log
+.next
+.git
+README.md
+CLAUDE.md
+AGENTS.md
+Bosko\ Design\ System-handoff.zip
