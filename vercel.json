@@ -2,10 +2,7 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": [
-    {
-      "key": "NEXT_PUBLIC_API_URL",
-      "value": "https://bosko-back.onrender.com"
-    }
-  ]
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://bosko-back.onrender.com"
+  }
 }
