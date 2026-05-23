@@ -7,6 +7,7 @@ import '@/styles/globals.css'
 export const metadata: Metadata = {
   title: 'Bosko · Pronto para sua próxima história?',
   description: 'Leitor de eBooks com biblioteca de clássicos em domínio público e estante pessoal.',
+  creator: 'abag.tech',
   openGraph: {
     title: 'Bosko · Pronto para sua próxima história?',
     description: 'Leitor de eBooks com biblioteca de clássicos em domínio público e estante pessoal.',
@@ -14,10 +15,11 @@ export const metadata: Metadata = {
     siteName: 'Bosko',
     images: [
       {
-        url: '/assets/bosko-logo-horizontal-orange.png',
-        width: 1200,
-        height: 630,
+        url: '/assets/bosko-app-icon.png',
+        width: 1024,
+        height: 1024,
         alt: 'Bosko - Pronto para sua próxima história?',
+        type: 'image/png',
       },
     ],
     locale: 'pt_BR',
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Bosko · Pronto para sua próxima história?',
     description: 'Leitor de eBooks com biblioteca de clássicos em domínio público e estante pessoal.',
-    images: ['/assets/bosko-logo-horizontal-orange.png'],
+    images: ['/assets/bosko-app-icon.png'],
   },
 }
 
