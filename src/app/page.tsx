@@ -71,20 +71,20 @@ export default function Home() {
               longa. Tudo em um lugar só, em português.
             </p>
             <div className="hero-cta">
-              <a className="badge" href="#baixar">
+                <a className="badge" href="https://apps.apple.com/br/app/bosko-app/id6768281883">
                 <AppStoreSvg />
                 <div>
                   <div className="b-top">Disponível na</div>
                   <div className="b-bot">App Store</div>
                 </div>
               </a>
-              <a className="badge dark" href="#baixar">
+              <div className="badge dark disabled">
                 <GooglePlaySvg />
                 <div>
-                  <div className="b-top">Disponível no</div>
+                  <div className="b-top">Em breve no</div>
                   <div className="b-bot">Google Play</div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
           <div className="hero-device">
@@ -253,20 +253,20 @@ export default function Home() {
           </h2>
           <p className="lead">Bosko é gratuito. Baixe e comece em menos de um minuto.</p>
           <div className="cta-buttons">
-            <a className="badge" href="#">
+            <a className="badge" href="https://apps.apple.com/br/app/bosko-app/id6768281883">
               <AppStoreSvg />
               <div>
                 <div className="b-top">Disponível na</div>
                 <div className="b-bot">App Store</div>
               </div>
             </a>
-            <a className="badge" href="#">
+            <div className="badge disabled">
               <GooglePlaySvg />
               <div>
-                <div className="b-top">Disponível no</div>
+                <div className="b-top">Em breve no</div>
                 <div className="b-bot">Google Play</div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>

@@ -196,6 +196,12 @@ img {
   background: rgba(255, 255, 255, 0.14);
 }
 
+.badge.disabled {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
 .hero-device {
   display: flex;
   justify-content: center;
