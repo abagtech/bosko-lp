@@ -1,6 +1,6 @@
 export async function GET() {
   try {
-    const response = await fetch('https://bosko-back.onrender.com/health', {
+    const response = await fetch('https://bosko-back.abag.tech/health', {
       next: { revalidate: 30 },
     })
 
