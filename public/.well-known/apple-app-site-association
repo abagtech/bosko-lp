@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ZJGCVYHCY9.tech.abag.bosko",
+        "paths": ["/join/*"]
+      }
+    ]
+  }
+}

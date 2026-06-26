@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "tech.abag.bosko",
+    "sha256_cert_fingerprints": [
+      "16:D0:20:F4:E2:16:CB:15:C6:C8:6B:E6:FD:F1:E5:2D:61:A5:96:53:12:ED:E3:41:D5:44:75:55:3A:38:90:D4"
+    ]
+  }
+}]
